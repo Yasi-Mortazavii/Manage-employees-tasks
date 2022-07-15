@@ -10,6 +10,9 @@ Route::prefix('v1')->group(function(){
     // Register User API
     Route::post('register', [RegisterController::class,'register']);
 
+    // API for user active email
+    Route::get('activation/{token}', [RegisterController::class, 'signupActive']);
+
 
 });
 
